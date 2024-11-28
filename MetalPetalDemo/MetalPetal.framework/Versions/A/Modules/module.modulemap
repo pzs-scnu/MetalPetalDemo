@@ -1,0 +1,18 @@
+framework module MetalPetal {
+  umbrella header "MetalPetal.h"
+
+  export *
+  module * { export * }
+  
+  explicit module Extension {
+      header "MTIContext+Internal.h"
+      header "MTIImage+Promise.h"
+      export *
+  }
+  
+}
+
+module MetalPetal.Swift {
+  header "MetalPetal-Swift.h"
+  requires objc
+}
